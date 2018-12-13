@@ -1,0 +1,19 @@
+2018-12-11 15:05:28.968 ERROR org.springframework.boot.logging.LoggingApplicationListener Line:365 - Cannot set level: warn,info,error for 'null'
+2018-12-11 15:05:30.848 ERROR com.sys.server.log.LogTest Line:13  - 报错------------------------------------------------------------
+2018-12-11 15:08:39.958 ERROR com.sys.server.log.LogTest Line:13  - 报错------------------------------------------------------------
+2018-12-11 15:44:06.720 ERROR org.springframework.boot.logging.LoggingApplicationListener Line:365 - Cannot set level: warn,info,error for 'null'
+2018-12-11 15:44:08.638 ERROR com.sys.server.log.LogTest Line:12  - 报错------------------------------------------------------------
+2018-12-11 15:45:41.083 ERROR org.springframework.boot.logging.LoggingApplicationListener Line:365 - Cannot set level: warn,info,error for 'null'
+2018-12-11 15:45:43.049 ERROR com.sys.server.log.LogTest Line:12  - 报错------------------------------------------------------------
+2018-12-11 15:46:18.836 ERROR org.springframework.boot.logging.LoggingApplicationListener Line:365 - Cannot set level: warn,info,error for 'null'
+2018-12-11 15:46:20.702 ERROR com.sys.server.log.LogTest Line:12  - 报错------------------------------------------------------------
+2018-12-11 16:28:39.729 ERROR org.springframework.boot.logging.LoggingApplicationListener Line:365 - Cannot set level: warn,info,error for 'null'
+2018-12-11 16:31:16.399 ERROR org.springframework.boot.logging.LoggingApplicationListener Line:365 - Cannot set level: warn,info,error for 'null'
+2018-12-11 16:36:59.740 ERROR org.springframework.boot.logging.LoggingApplicationListener Line:365 - Cannot set level: warn,info,error for 'null'
+2018-12-11 16:37:29.012 ERROR org.springframework.boot.logging.LoggingApplicationListener Line:365 - Cannot set level: warn,info,error for 'null'
+2018-12-11 16:43:22.186 ERROR org.springframework.boot.logging.LoggingApplicationListener Line:365 - Cannot set level: warn,info,error for 'null'
+2018-12-11 16:44:48.883 ERROR org.springframework.boot.logging.LoggingApplicationListener Line:365 - Cannot set level: warn,info,error for 'null'
+2018-12-11 16:45:09.035 ERROR org.springframework.boot.logging.LoggingApplicationListener Line:365 - Cannot set level: warn,info,error for 'null'
+2018-12-11 16:50:16.833 ERROR org.springframework.boot.logging.LoggingApplicationListener Line:365 - Cannot set level: warn,info,error for 'null'
+2018-12-11 16:50:58.165 ERROR org.springframework.boot.logging.LoggingApplicationListener Line:365 - Cannot set level: warn,info,error for 'null'
+2018-12-11 17:03:24.636 ERROR org.springframework.boot.logging.LoggingApplicationListener Line:365 - Cannot set level: warn,info,error for 'null'
