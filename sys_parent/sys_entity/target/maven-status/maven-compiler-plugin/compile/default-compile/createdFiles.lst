@@ -1,0 +1,4 @@
+com\sys\entity\user\User.class
+com\sys\entity\page\BaseEntity.class
+com\sys\entity\page\PageInfo.class
+com\sys\entity\App.class
