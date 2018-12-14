@@ -16,13 +16,13 @@ public interface BaseInterface<T> {
 	
 	public PageInfo<T> findPage(PageInfo<T> pageInfo,T entity);
 	
-	public void save(T entity);
+	public T save(T entity);
 	
-	public void saveSelective(T entity);
+	public T saveSelective(T entity);
 	
-	public void update(T entity);
+	public T update(T entity);
 	
-	public void updateSelective(T entity);
+	public T updateSelective(T entity);
 	
 	public void delete(T entity);
 }
