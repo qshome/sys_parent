@@ -1,4 +1,6 @@
 target
+mylogs
+.log
 .settings
 .classpath
 .project
