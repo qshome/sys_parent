@@ -1,0 +1,8 @@
+target
+mylogs
+.log
+.settings
+.classpath
+.project
+.gitgnore
+pom.properties
