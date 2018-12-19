@@ -68,6 +68,13 @@
 	    <artifactId>pagehelper-spring-boot-starter</artifactId>
 	    <version>1.2.3</version>
 	</dependency>
+	
+	<dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>1.2.46</version>
+    </dependency>
+    
   </dependencies>
   <build>
 		<plugins>
@@ -84,5 +91,6 @@
     <module>sys_nosql</module>
     <module>sys_server</module>
     <module>sys_client</module>
+    <module>sys_rabbitmq</module>
   </modules>
 </project>
