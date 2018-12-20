@@ -5,9 +5,6 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
 import com.alibaba.dubbo.config.annotation.Service;
@@ -29,7 +26,7 @@ public class UserServiceFace implements UserInterface<User>{
 		return userService.get(key);
 	}
 	
-	@Cacheable(value = "user", key = "#id")
+	//@Cacheable(value = "user", key = "#id")
 	public User getUserById(String id) {
 		logger.info("-----------------------------");
 		logger.info("进入get方式里");
@@ -37,7 +34,7 @@ public class UserServiceFace implements UserInterface<User>{
 		return userService.get(id);
 	}
 	
-	@Cacheable(value = "user", key = "#user.id")
+	//@Cacheable(value = "user", key = "#user.id")
 	public User getUserById(User user) {
 		logger.info("-----------------------------");
 		logger.info("进入get方式里");
@@ -66,35 +63,35 @@ public class UserServiceFace implements UserInterface<User>{
 	}
 
 	@Override
-	@CachePut(value = "user", key = "#user.id")
+	//@CachePut(value = "user", key = "#user.id")
 	public User save(User user) {
 		userService.save(user);
 		return user;
 	}
 
 	@Override
-	@CachePut(value = "user", key = "#user.id")
+	//@CachePut(value = "user", key = "#user.id")
 	public User saveSelective(User user) {
 		userService.saveSelective(user);
 		return user;
 	}
 
 	@Override
-	@CachePut(value = "user", key = "#user.id")
+	//@CachePut(value = "user", key = "#user.id")
 	public User update(User user) {
 		userService.update(user);
 		return user;
 	}
 
 	@Override
-	@CachePut(value = "user", key = "#user.id")
+	//@CachePut(value = "user", key = "#user.id")
 	public User updateSelective(User user) {
 		userService.updateSelective(user);
 		return user;
 	}
 
 	@Override
-	@CacheEvict(value = "user", key = "#user.id")
+	//@CacheEvict(value = "user", key = "#user.id")
 	public void delete(User user) {
 		userService.delete(user);
 	}
