@@ -9,6 +9,7 @@ public enum ExpCode {
 	private String name;
 	
 	private ExpCode(int code) {
+		this.code = code;
 		switch(code) {
 			case 999:
 				name ="系统错误，请联系管理员";

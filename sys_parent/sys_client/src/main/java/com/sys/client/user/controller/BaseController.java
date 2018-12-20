@@ -52,7 +52,7 @@ public class BaseController<T> {
 		}catch(BusinessException e) {
 			transactionData.setStatus(-1);
 			transactionData.setExpMsg(e.getMsg());
-			logger.error("[系统交易异常] -[ 交易码：{}] - 异常信息如下：\n",transactionData.getTradeCode(),e);
+			logger.error("[系统交易异常] -[ 交易码：{}] - [异常信息如下：{}]",transactionData.getTradeCode(),e.getMsg(),e);
 			logger.info("[系统交易异常] - [交易码：{}] - [交易名称{}] - [异常码：{} - {}] - [交易结束]",transactionData.getTradeCode(),TradeCode.getName(transactionData.getTradeCode()),e.getCode(),e.getMsg());
 		}catch(Exception e) {
 			transactionData.setStatus(-1);

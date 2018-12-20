@@ -15,7 +15,7 @@ public class BusinessException extends RuntimeException{
 	}   
 	
 	public BusinessException(int code) {
-        this.code = code;
+		this.code = code;
     }
 	
 	public BusinessException(int code, String msg,String tradeCode) {
@@ -34,7 +34,7 @@ public class BusinessException extends RuntimeException{
 
 	public String getMsg() {
 		if(msg==null) {
-			return ExpCode.getName(code);
+			this.msg=ExpCode.getName(code);
 		}
 		return msg;
 	}
