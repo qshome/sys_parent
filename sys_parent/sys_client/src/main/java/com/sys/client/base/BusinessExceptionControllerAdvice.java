@@ -20,18 +20,16 @@ public class BusinessExceptionControllerAdvice {
     @ExceptionHandler(value = Exception.class)
     public Map<String,Object> errorHandler(Exception ex) {
         Map<String,Object> map = new HashMap<String,Object>();
-        map.put("code", 100);
-        map.put("msg", ex.getMessage());
-        logger.error("[系统交易失败] - 交易码：{}，异常码：{}，异常信息：\n","无","999",ex);
-        logger.info("[系统交易失败] - 交易码：{}，异常码：{}，异常信息：\n{}","无","999","请联系系统管理员");
+        logger.error("[系统交易失败] - [交易码：{}] - [异常码：{}] - 异常信息：\n","无","999",ex);
+        logger.info("[系统交易失败] - [交易码：{}] - [异常码：{}] - [异常信息：{}]","无","999","请联系系统管理员");
         return map;
     }
 	
 	@ResponseBody
     @ExceptionHandler(value = BusinessException.class)
     public BusinessException errorHandler(BusinessException ex) {
-		logger.error("[系统交易失败] - 交易码：{}，异常码：{}，异常信息：\n",ex.getTradeCode(),ex.getCode(),ex);
-		logger.info("[系统交易失败] - 交易码：{}，异常码：{}，异常信息：\n{}",ex.getTradeCode(),ex.getCode(),ex.getMsg());
+		logger.error("[系统交易失败] - [交易码：{}] - [异常码：{}] - 异常信息：\n",ex.getTradeCode(),ex.getCode(),ex);
+		logger.info("[系统交易失败] - [交易码：{}] - [异常码：{}] - [异常信息：{}]",ex.getTradeCode(),ex.getCode(),ex.getMsg());
         return ex;
     }
 }

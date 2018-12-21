@@ -8,9 +8,9 @@ import org.slf4j.LoggerFactory;
 import com.alibaba.dubbo.common.utils.StringUtils;
 import com.sys.client.base.SpringUtil;
 import com.sys.client.user.service.BaseService;
+import com.sys.entity.base.BizExpCode;
+import com.sys.entity.base.BizTradeCode;
 import com.sys.entity.base.BusinessException;
-import com.sys.entity.base.ExpCode;
-import com.sys.entity.base.TradeCode;
 import com.sys.entity.base.TransactionData;
 import com.sys.entity.page.PageInfo;
 
@@ -28,7 +28,7 @@ public class BaseController<T> {
 				transactionData.setExpMsg("[系统交易失败] - [未填写交易码或服务名称] - [交易结束]");
 				return transactionData;
 			}
-			if(null == TradeCode.getName(transactionData.getTradeCode())) {
+			if(null == BizTradeCode.getTradeName(transactionData.getTradeCode())) {
 				logger.error("[系统交易失败] - [未定义交易码] - [交易结束]");
 				logger.error("[系统交易失败] - [未定义交易码] - [交易结束]");
 				transactionData.setStatus(-1);
@@ -53,12 +53,12 @@ public class BaseController<T> {
 			transactionData.setStatus(-1);
 			transactionData.setExpMsg(e.getMsg());
 			logger.error("[系统交易异常] -[ 交易码：{}] - [异常信息如下：{}]",transactionData.getTradeCode(),e.getMsg(),e);
-			logger.info("[系统交易异常] - [交易码：{}] - [交易名称{}] - [异常码：{} - {}] - [交易结束]",transactionData.getTradeCode(),TradeCode.getName(transactionData.getTradeCode()),e.getCode(),e.getMsg());
+			logger.info("[系统交易异常] - [交易码：{}] - [交易名称{}] - [异常码：{} - {}] - [交易结束]",transactionData.getTradeCode(),BizTradeCode.getTradeName(transactionData.getTradeCode()),e.getCode(),e.getMsg());
 		}catch(Exception e) {
 			transactionData.setStatus(-1);
-			transactionData.setExpMsg(ExpCode.getName(999));
+			transactionData.setExpMsg(BizExpCode.getExpName("999"));
 			logger.error("[系统交易异常] - [交易码：{}] - 异常信息如下：\n",transactionData.getTradeCode(),e);
-			logger.info("[系统交易异常] - [交易码：{}] - [交易名称{}] - [异常码：{} - {}] - [交易结束]",transactionData.getTradeCode(),TradeCode.getName(transactionData.getTradeCode()),999,ExpCode.getName(999));
+			logger.info("[系统交易异常] - [交易码：{}] - [交易名称{}] - [异常码：{} - {}] - [交易结束]",transactionData.getTradeCode(),BizTradeCode.getTradeName(transactionData.getTradeCode()),"999",BizExpCode.getExpName("999"));
 		}
 		return transactionData;
 	}

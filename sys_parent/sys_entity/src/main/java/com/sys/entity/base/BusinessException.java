@@ -6,7 +6,7 @@ public class BusinessException extends RuntimeException{
 	 * 
 	 */
 	private static final long serialVersionUID = 6986059123113773679L;
-	private int code;
+	private String code;
     private String msg;
     private String tradeCode;
     
@@ -14,27 +14,27 @@ public class BusinessException extends RuntimeException{
 		// TODO Auto-generated constructor stub
 	}   
 	
-	public BusinessException(int code) {
+	public BusinessException(String code) {
 		this.code = code;
     }
 	
-	public BusinessException(int code, String msg,String tradeCode) {
+	public BusinessException(String code, String msg,String tradeCode) {
         this.code = code;
         this.msg = msg;
         this.tradeCode= tradeCode;
     }
 
-	public int getCode() {
+	public String getCode() {
 		return code;
 	}
 
-	public void setCode(int code) {
+	public void setCode(String code) {
 		this.code = code;
 	}
 
 	public String getMsg() {
 		if(msg==null) {
-			this.msg=ExpCode.getName(code);
+			this.msg=BizExpCode.getExpName(code);
 		}
 		return msg;
 	}

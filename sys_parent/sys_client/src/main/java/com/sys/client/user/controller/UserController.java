@@ -15,7 +15,7 @@ public class UserController extends BaseController<User>{
 	@RequestMapping("/user/list")
 	public TransactionData<User> list(HttpServletRequest request,HttpServletResponse response,User user) {
 		TransactionData<User> transactionData = new TransactionData<User>();
-		transactionData.setTradeCode("10001");
+		transactionData.setTradeCode("W10001");
 		transactionData.setServiceName("userService");
 		transactionData.setEntity(user);
 		super.execute(request,transactionData);
@@ -25,7 +25,7 @@ public class UserController extends BaseController<User>{
 	@RequestMapping("/user/get")
 	public TransactionData<User> get(HttpServletRequest request,HttpServletResponse response,User user) {
 		TransactionData<User> transactionData = new TransactionData<User>();
-		transactionData.setTradeCode("10002");
+		transactionData.setTradeCode("W10002");
 		transactionData.setServiceName("userService");
 		transactionData.setEntity(user);
 		super.execute(request,transactionData);
@@ -35,7 +35,7 @@ public class UserController extends BaseController<User>{
 	@RequestMapping("/user/save")
 	public TransactionData<User> save(HttpServletRequest request,HttpServletResponse response,User user) {
 		TransactionData<User> transactionData = new TransactionData<User>();
-		transactionData.setTradeCode("10003");
+		transactionData.setTradeCode("W10003");
 		transactionData.setServiceName("userService");
 		transactionData.setEntity(user);
 		super.execute(request,transactionData);

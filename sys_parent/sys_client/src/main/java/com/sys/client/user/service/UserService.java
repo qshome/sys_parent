@@ -27,11 +27,11 @@ public class UserService implements BaseService<User>{
 	@Override
 	public TransactionData<User> execute(TransactionData<User> transactionData) throws BusinessException {
 		String tradeCode = transactionData.getTradeCode();
-		if("10001".equals(tradeCode)) {
+		if("W10001".equals(tradeCode)) {
 			findList(transactionData);
-		}else if("10002".equals(tradeCode)) {
+		}else if("W10002".equals(tradeCode)) {
 			get(transactionData);
-		}else if("10003".equals(tradeCode)) {
+		}else if("W10003".equals(tradeCode)) {
 			save(transactionData);
 		}
 		return transactionData;
@@ -44,8 +44,9 @@ public class UserService implements BaseService<User>{
 	 */
 	public TransactionData<User> get(TransactionData<User> transactionData){
 		User user = userCache.get(transactionData.getEntity());
-		transactionData.setData(user);;
-		return transactionData;
+		transactionData.setData(user);
+		throw new BusinessException("999");
+		//return transactionData;
 	}
 	
 	/**

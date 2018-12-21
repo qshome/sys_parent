@@ -26,22 +26,6 @@ public class UserServiceFace implements UserInterface<User>{
 		return userService.get(key);
 	}
 	
-	//@Cacheable(value = "user", key = "#id")
-	public User getUserById(String id) {
-		logger.info("-----------------------------");
-		logger.info("进入get方式里");
-		logger.info("-----------------------------");
-		return userService.get(id);
-	}
-	
-	//@Cacheable(value = "user", key = "#user.id")
-	public User getUserById(User user) {
-		logger.info("-----------------------------");
-		logger.info("进入get方式里");
-		logger.info("-----------------------------");
-		return userService.get(user);
-	}
-
 	@Override
 	public List<User> simpleFindList(User entity) {
 		return userService.simpleFindList(entity);
@@ -63,35 +47,30 @@ public class UserServiceFace implements UserInterface<User>{
 	}
 
 	@Override
-	//@CachePut(value = "user", key = "#user.id")
 	public User save(User user) {
 		userService.save(user);
 		return user;
 	}
 
 	@Override
-	//@CachePut(value = "user", key = "#user.id")
 	public User saveSelective(User user) {
 		userService.saveSelective(user);
 		return user;
 	}
 
 	@Override
-	//@CachePut(value = "user", key = "#user.id")
 	public User update(User user) {
 		userService.update(user);
 		return user;
 	}
 
 	@Override
-	//@CachePut(value = "user", key = "#user.id")
 	public User updateSelective(User user) {
 		userService.updateSelective(user);
 		return user;
 	}
 
 	@Override
-	//@CacheEvict(value = "user", key = "#user.id")
 	public void delete(User user) {
 		userService.delete(user);
 	}
